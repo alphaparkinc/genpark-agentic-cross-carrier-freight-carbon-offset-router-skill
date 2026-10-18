@@ -1,0 +1,33 @@
+{
+  "name": "genpark-agentic-cross-carrier-freight-carbon-offset-router-skill",
+  "version": "1.0.0",
+  "description": "AI Cross-Carrier Freight Carbon Offset & Sustainable Logistics Router. Applies GLEC framework emissions factors (air, rail, maritime, electric ground), optimizes multi-carrier shipping routes, and generates verified carbon offset credit allocation certificates.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "optimize_freight_and_offset",
+      "description": "Calculate Scope 3 shipping emissions and select optimal eco-efficient freight route.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cargo_details": {
+            "type": "object",
+            "description": "Weight_kg, origin, destination, max_acceptable_days."
+          },
+          "carrier_options": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Carrier routes with mode, transit_days, cost_usd, distance_km."
+          }
+        },
+        "required": [
+          "cargo_details",
+          "carrier_options"
+        ]
+      }
+    }
+  ]
+}
